@@ -1,0 +1,51 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Microsoft Yahei';
+}
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+  text-align: center;
+  background-color: white;
+  background-image: url('../image/view-background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#view{
+  width: 60%;
+  margin: 5% 20%;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 30px 10px 50px 10px rgba(0, 0, 0, 0.5);
+}
+
+.view-title{
+  width: 100%;
+  background-color: #ADADAD;
+}
+
+.view-time{
+  width: 100%;
+  margin-bottom: 20px;
+  color: grey;
+}
+
+.view-operation{
+  width: 100%;
+  text-align: center;
+}
+.view-content{
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
+
+a{
+  color: blue;
+}

@@ -1,0 +1,153 @@
+*{
+  border: 0px;
+  padding: 0px;
+  font-family: 'Microsoft Yahei';
+}
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  border: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: #FFFACD;
+}
+/*导航框*/
+#navigator{
+  font-size: 14px;
+  font-weight: bold;
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  background-color: #EECFA1;
+  box-shadow: 5px 10px 50px 10px rgba(0, 0, 0, 0.2);
+}
+/*导航框..头像*/
+#navigator .headshot{
+  width: 60%;
+  height: 20%;
+  margin: 30px 20% 0px 20%;
+  text-align: center;
+  overflow: hidden;
+
+}
+/*导航框..个人信息*/
+#navigator .personal{
+  width: 90%;
+  height: 150px;
+  margin: 30px 5% 0px 5%;
+
+}
+
+/*导航框..内容链接*/
+#navigator .content-navigator{
+  width: 90%;
+  height: 150px;
+  margin: 30px 5% 0px 5% ;
+
+}
+
+/*导航框..内容链接/个人信息..具体信息*/
+#navigator .detail{
+  width: 90%;
+  margin: 10px 5% 10px 5%;
+  padding-bottom: 5px;
+  text-align: left;
+  border-bottom: 1px solid;
+  border-bottom-color: grey;
+
+}
+/*具体信息..图标信息*/
+#navigator .detail .icon{
+
+  vertical-align: middle;
+}
+
+/*内容栏*/
+#content{
+  width: 80%;
+  height: 100%;
+  float:right;
+}
+/*内容栏..文章简览主框架*/
+#content .essay{
+  width: 90%;
+  margin: 20px 5% 0px 5%;
+  border-bottom: 1px groove;
+}
+/*内容栏..文章..标题*/
+#content .essay .essay-title{
+  width: 100%;
+  margin-bottom: 2px;
+  font-size: 24px;
+  color:#010208;
+}
+/*内容栏..文章..时间*/
+#content .essay .essay-time{
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: grey;
+
+}
+/*内容栏..文章..文本*/
+#content .essay .essay-text{
+  width: 100%;
+  font-size: 16px;
+  color: #1C1C1C;
+}
+
+
+
+a{
+  color:inherit;
+  text-decoration: none;
+}
+
+
+
+img.small{
+  width: 16px;
+  height: 16px;
+}
+
+img.middle{
+  width: 32px;
+  height: 32px;
+}
+
+img.big{
+  width: 64px;
+  height: 64px;
+}
+
+img.large{
+  height: 128px;
+  width: 128px;
+  background-color: white;
+}
+
+img.auto{
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: white;
+  background-position: center;
+}
+
+img.circle{
+  border-radius: 50%;
+}
+
+.spacing{
+  text-indent: 3em;
+}
+
+span.spacing{
+  margin-left: 5%;
+}
