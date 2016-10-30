@@ -99,6 +99,8 @@ body{
 #content .essay .essay-text{
   width: 100%;
   font-size: 16px;
+  line-height: 1.2em;
+  letter-spacing: .1em;
   color: #1C1C1C;
 }
 

@@ -34,6 +34,7 @@ body{
   width: 100%;
   margin-bottom: 20px;
   color: grey;
+  letter-spacing: .1em;
 }
 
 .view-operation{
@@ -42,7 +43,9 @@ body{
 }
 .view-content{
   width: 80%;
-  margin: auto;
+  margin: 0 5% 20px;
+  line-height: 1.2em;
+  letter-spacing: .1em;
   text-align: left;
 }
 
