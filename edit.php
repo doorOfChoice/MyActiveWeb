@@ -40,7 +40,7 @@ if(isset($_COOKIE['username']) && $_COOKIE['username'] == $AUTH['username'])
       $time = time();
       $content = $_POST['content'];
       //修改原始数据
-      $sql = "update artical set type='$type',title='$title',time=$time,content='$content'
+      $sql = "update artical set type=\"$type\",title=\"$title\",time=$time,content=\"$content\"
        where content_id={$_GET['content_id']}";
       $result = mysqli_query($connect, $sql) OR die(mysqli_error($connect));
 

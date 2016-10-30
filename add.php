@@ -16,7 +16,7 @@ if(isset($_COOKIE['username']) && $_COOKIE['username'] == $AUTH['username'])
     $content = $_POST['content'];//内容
     #往artical表里面添加内容
     $sql = 'insert into artical(type, title, time, content) '
-          ."values('$type', '$title',".time().", '$content')";
+          ."values(\"$type\", \"$title\",".time().", \"$content\")";
     #接受数据库返回的内容
     $result = mysqli_query($connect, $sql) OR die(mysqli_error($connect));
 
