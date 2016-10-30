@@ -1,14 +1,19 @@
 <?php
-  $connect = mysqli_connect('localhost', 'root', '1997');
+  $host = "localhost";
+  $user = "root";
+  $password = "1997";
+  $database = "blog";
+  $port = 80;
+  $connect = mysqli_connect($host, $user, $password);
 
   if(!$connect)
   {
-    die(mysqli_error($connect));
+    die('error:'.mysqli_error($connect));
   }
   else
   {
-    $checkDatabase = 'create database if not exists blog';
-    $checkTable_artical = 'create table if not exists blog.artical(
+    $checkDatabase = 'create database if not exists '.$database;
+    $checkTable_artical = 'create table if not exists '.$database.'.artical(
     content_id int primary key auto_increment,
     type varchar(16) not null,
     title varchar(40) not null,
@@ -17,11 +22,11 @@
     )';
 
     $result_database = mysqli_query($connect, $checkDatabase)
-    OR die(mysqli_error($connect));
+    OR die('error data:'.mysqli_error($connect));
 
     $result_table_artical = mysqli_query($connect, $checkTable_artical)
-    OR die(mysqli_error($connect));
+    OR die('error table:'.mysqli_error($connect));
 
-    mysqli_select_db($connect, 'blog');
+    mysqli_select_db($connect, $database);
   }
  ?>

@@ -45,7 +45,7 @@
               </div>
 
               <div class='essay-text'>
-                <p>$content</p>
+                <pre>$content</pre>
               </div>
             </div>
           ".$articals;
