@@ -21,19 +21,19 @@
     require("php/connectMysql.php");
 
     $type = $_GET['type'];//类型
-    $sql = "select * from artical where type='$type' ";//获取该类型数据
+    $sql = "select *,substring(content,1,200) as content
+     from artical where type='$type' ";//获取该类型数据
     $result = mysqli_query($connect, $sql) OR die(mysqli_error($connect));
-
+    $content_counts = mysqli_num_rows($result);
     if($result)
     {
-      $articals = "";
+      $articals = "";//所有文章的html汇总
       while($row = mysqli_fetch_assoc($result))
       {
           $id = $row['content_id'];//文章唯一标识
           $title = $row['title'];//文章标题
           $time = date("Y-m-d H:i:s", $row['time']);//文章创建\修改世界
           $content = $row['content'];//文章内容
-          //所有文章的html汇总
           $articals = "
             <div class='essay'>
               <div class='essay-title'>
@@ -50,6 +50,9 @@
             </div>
           ".$articals;
       }
+      $articals = "<h1 align='center'>专栏:$type</h1>"
+                  ."<p align='center'>文章数目: $content_counts</p>"
+                  .$articals;
       page::displayPage("", $articals);
     }
   }
