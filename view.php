@@ -66,7 +66,7 @@
 
             echo "
             <div class='view-content'>
-                <pre>$content</pre>
+              $content
             </div>
             ";
           }

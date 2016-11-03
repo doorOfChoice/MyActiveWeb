@@ -21,8 +21,9 @@
     require("php/connectMysql.php");
 
     $type = $_GET['type'];//类型
+    //获取该类型数据
     $sql = "select *,substring(content,1,200) as content
-     from artical where type='$type' ";//获取该类型数据
+     from artical where type='$type' ";
     $result = mysqli_query($connect, $sql) OR die(mysqli_error($connect));
     $content_counts = mysqli_num_rows($result);
     if($result)
@@ -45,7 +46,7 @@
               </div>
 
               <div class='essay-text'>
-                <pre>$content</pre>
+                $content
               </div>
             </div>
           ".$articals;

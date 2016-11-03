@@ -13,7 +13,7 @@ if(isset($_COOKIE['username']) && $_COOKIE['username'] == $AUTH['username'])
 
     $title = trim($_POST['title']);//标题
     $type = $_POST['type'];//类型
-    $content = $_POST['content'];//内容
+    $content = htmlspecialchars($_POST['content']);//内容
     #往artical表里面添加内容
     $sql = 'insert into artical(type, title, time, content) '
           ."values(\"$type\", \"$title\",".time().", \"$content\")";
